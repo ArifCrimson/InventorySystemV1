@@ -15,25 +15,20 @@
             <div class="main-panel">
                 <div class="content-wrapper">
                     <div class="row">
-                        <div class="col-lg-8 grid-margin stretch-card">
+                        <div class="col-md-6 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4 class="card-title mb-0">List Of Categories</h4>
-                                        <a href="{{ route('category.create') }}" class="btn btn-primary btn-rounded btn-fw">Create Category</a>
-                                    </div>
-
-                                    <div class="table-responsive">
-                                        <table class="table table-hover">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <h4 class="card-title">Create New Category Form</h4>
+                                    <form method="POST" action="" class="forms-sample">
+                                        @csrf
+                                        <div class="form-group">
+                                            <label for="InputCategoryName">Category Name :</label>
+                                            <input type="text" class="form-control" id="InputCategoryName"
+                                                placeholder="Cth: Technology">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary me-2">Submit</button>
+                                        <button class="btn btn-light">Cancel</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -51,6 +46,7 @@
     <!-- container-scroller -->
     <!-- plugins:js -->
     @include('partials.plugin')
+    <!-- End custom js for this page-->
 </body>
 
 </html>
