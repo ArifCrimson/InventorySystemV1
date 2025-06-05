@@ -8,7 +8,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('category.index') }}">
+            <a class="nav-link" href="">
                 <i class="mdi mdi-view-headline menu-icon"></i>
                 <span class="menu-title">Products</span>
             </a>
@@ -20,11 +20,19 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('category.index') }}">
+                <i class="mdi mdi-grid-large menu-icon"></i>
+                <span class="menu-title">Category</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link" href="pages/tables/basic-table.html">
                 <i class="mdi mdi-grid-large menu-icon"></i>
                 <span class="menu-title">Users</span>
             </a>
         </li>
+
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                 aria-controls="ui-basic">
