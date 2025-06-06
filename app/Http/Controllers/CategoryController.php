@@ -9,12 +9,13 @@ use Illuminate\Support\Facades\Validator;
 class CategoryController extends Controller
 {
     public function index(){
-        return view('categories.index');
+        $title = "Category";
+        return view('categories.index', compact('title'));
     }
 
     public function create(){
         $title = 'Create Category';
-        return view('categories.create');
+        return view('categories.create', compact('title'));
     }
 
     public function store(Request $request){
@@ -34,6 +35,5 @@ class CategoryController extends Controller
         $data->save();
 
         return redirect()->route('category.index')->with('success', 'Category Added!');
-
     }
 }
