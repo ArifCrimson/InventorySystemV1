@@ -15,19 +15,32 @@
             <div class="main-panel">
                 <div class="content-wrapper">
                     <div class="row">
+                        @include('sweetalert::alert')
                         <div class="col-md-6 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Create New Category Form</h4>
-                                    <form method="POST" action="" class="forms-sample">
+                                    <h4 class="card-title">Insert New Category Name</h4>
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $e)
+                                                    <li>{{ $e }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                                    <form method="POST" action="{{ route('category.store') }}" class="forms-sample">
                                         @csrf
                                         <div class="form-group">
                                             <label for="InputCategoryName">Category Name :</label>
                                             <input type="text" class="form-control" id="InputCategoryName"
-                                                placeholder="Cth: Technology">
+                                                name="name" placeholder="Cth: Technology"
+                                                value="{{ old('name') }}">
+                                            @error('name')
+                                                <div class="alert alert-danger"> {{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <button type="submit" class="btn btn-primary me-2">Submit</button>
-                                        <button class="btn btn-light">Cancel</button>
                                     </form>
                                 </div>
                             </div>

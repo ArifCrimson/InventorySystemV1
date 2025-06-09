@@ -33,7 +33,7 @@
             </a>
         </li>
 
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                 aria-controls="ui-basic">
                 <i class="mdi mdi-circle-outline menu-icon"></i>
@@ -76,6 +76,6 @@
                 <i class="mdi mdi-file-document-box-outline menu-icon"></i>
                 <span class="menu-title">Documentation</span>
             </a>
-        </li>
+        </li> --}}
     </ul>
 </nav>
