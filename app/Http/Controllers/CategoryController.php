@@ -8,9 +8,17 @@ use Illuminate\Support\Facades\Validator;
 
 class CategoryController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $title = "Category";
-        return view('categories.index', compact('title'));
+        $category = CategoryModel::paginate(10);
+        $query = CategoryModel::query();
+
+        if($request->has('name') && !empty($request->input('name'))){
+            $query->where('name', 'like', '%' . $request->input('name') . '%');
+        }
+        $categoryresult = $query->orderBy('name', 'asc')->paginate(10)->appends($request->query());
+
+        return view('categories.index', compact('title', 'categoryresult'));
     }
 
     public function create(){
