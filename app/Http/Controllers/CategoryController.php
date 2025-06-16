@@ -16,7 +16,8 @@ class CategoryController extends Controller
         if($request->has('name') && !empty($request->input('name'))){
             $query->where('name', 'like', '%' . $request->input('name') . '%');
         }
-        $categoryresult = $query->orderBy('name', 'asc')->paginate(10)->appends($request->query());
+
+        $categoryresult = $query->orderBy('name', 'desc')->paginate(10)->appends($request->query());
 
         return view('categories.index', compact('title', 'categoryresult'));
     }
