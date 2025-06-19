@@ -28,5 +28,6 @@ Route::get('/productCreate', [ProductController::class, 'create'])->name('produc
 Route::post('/productAdd', [ProductController::class, 'store'])->name('product.store');
 Route::get('/productEdit/{id}',[ProductController::class, 'edit'])->name('product.edit');
 Route::put('/productUpdate/{id}', [ProductController::class, 'update'])->name('product.update');
+Route::delete('/productDelete/{id}', [ProductController::class, 'delete'])->name('product.delete');
 
 require __DIR__.'/auth.php';

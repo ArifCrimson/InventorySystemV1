@@ -21,7 +21,7 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                         <h4 class="card-title mb-0">List Of Products</h4>
-                                        <a href=""
+                                        <a href="{{ route('product.create') }}"
                                             class="btn btn-primary btn-rounded btn-fw">Create Products</a>
                                     </div>
 
