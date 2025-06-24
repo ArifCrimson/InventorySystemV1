@@ -31,6 +31,7 @@
                                                 <tr>
                                                     <th>No.</th>
                                                     <th>Category Name</th>
+                                                    <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -42,6 +43,7 @@
                                                         <td>
                                                             {{ $result->name }}
                                                         </td>
+                                                        <td><a href="" class="btn btn-primary btn-rounded btn-fw">Edit</a></td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>

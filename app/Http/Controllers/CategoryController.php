@@ -45,4 +45,10 @@ class CategoryController extends Controller
 
         return redirect()->route('category.index')->with('success', 'Category Added!');
     }
+
+    public function edit (Request $request, $id){
+        $title = 'Edit Category Name';
+        $data = CategoryModel::find($id);
+        return view('categories.edit', compact('title', 'data'));
+    }
 }
