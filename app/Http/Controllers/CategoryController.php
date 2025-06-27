@@ -46,9 +46,35 @@ class CategoryController extends Controller
         return redirect()->route('category.index')->with('success', 'Category Added!');
     }
 
+
+    //update category name section!!
+    
     public function edit (Request $request, $id){
         $title = 'Edit Category Name';
         $data = CategoryModel::find($id);
         return view('categories.edit', compact('title', 'data'));
+    }
+
+    public function update (Request $request, $id){
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string',
+        ], [
+            'name.required' => 'New category name needed!',
+        ]);
+
+        if($validator->fails()){
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        $category = CategoryModel::find($id);
+        if(!$category){
+            return redirect()->back()->with('Error', 'THE CATEGORY DOES NOT EXIST');
+        }
+
+        $category->name = $request->input('name');
+
+        $category->save();
+
+        return redirect()->route('category.index')->with('success', 'Category name has been updated!');
     }
 }
