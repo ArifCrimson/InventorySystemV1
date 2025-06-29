@@ -43,7 +43,7 @@
                                                         <td>
                                                             {{ $result->name }}
                                                         </td>
-                                                        <td><a href="" class="btn btn-primary btn-rounded btn-fw">Edit</a>
+                                                        <td><a href="{{ route('category.edit', ['id' => $result->id]) }}" class="btn btn-primary btn-rounded btn-fw">Edit</a>
                                                         <button type="button" class="btn btn-danger btn-rounded btn-fw" >Delete</button></td>
                                                     </tr>
                                                 @endforeach

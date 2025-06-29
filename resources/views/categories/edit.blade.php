@@ -29,7 +29,7 @@
                                             </ul>
                                         </div>
                                     @endif
-                                    <form method="POST" action="" class="forms-sample">
+                                    <form method="POST" action="{{ route('category.update', ['id' => $data->id]) }}" class="forms-sample">
                                         @csrf
                                         @method('PUT')
                                         <div class="form-group">
