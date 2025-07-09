@@ -43,8 +43,16 @@
                                                         <td>
                                                             {{ $result->name }}
                                                         </td>
-                                                        <td><a href="{{ route('category.edit', ['id' => $result->id]) }}" class="btn btn-primary btn-rounded btn-fw">Edit</a>
-                                                        <button type="button" class="btn btn-danger btn-rounded btn-fw" >Delete</button></td>
+                                                        <td><a href="{{ route('category.edit', ['id' => $result->id]) }}"
+                                                                class="btn btn-primary btn-rounded btn-fw">Edit</a>
+                                                            <form
+                                                                action="{{ route('category.delete', ['id' => $result->id]) }}"
+                                                                method="POST">@csrf @method('DELETE')
+                                                                <button type="submit" onclick=""
+                                                                    class="btn btn-danger btn-rounded btn-fw">Delete</button>
+                                                            </form>
+
+                                                        </td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>
