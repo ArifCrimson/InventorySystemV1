@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\CategoryModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
@@ -43,7 +44,9 @@ class CategoryController extends Controller
         $data->name = $request->input('name');
         $data->save();
 
-        return redirect()->route('category.index')->with('success', 'Category Added!');
+        Alert::success('Success', 'Category Added Successfully!');
+
+        return redirect()->route('category.index');
     }
 
 
