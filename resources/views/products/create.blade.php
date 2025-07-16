@@ -19,7 +19,7 @@
                         <div class="col-md-6 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Insert New Category Name</h4>
+                                    <h4 class="card-title">Create New Product Details</h4>
                                     @if ($errors->any())
                                         <div class="alert alert-danger">
                                             <ul>
@@ -32,9 +32,9 @@
                                     <form method="POST" action="{{ route('product.store') }}" class="forms-sample">
                                         @csrf
                                         <div class="form-group">
-                                            <label for="InputCategoryName">Category Name :</label>
+                                            <label for="InputCategoryName">Product Name :</label>
                                             <input type="text" class="form-control" id="InputCategoryName"
-                                                name="name" placeholder="Cth: Technology"
+                                                name="name" placeholder="Example: Chicken"
                                                 value="{{ old('name') }}">
                                             @error('name')
                                                 <div class="alert alert-danger"> {{ $message }}</div>

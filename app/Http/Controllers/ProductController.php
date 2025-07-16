@@ -7,6 +7,7 @@ use App\Models\ProductModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;   
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 
@@ -66,6 +67,8 @@ class ProductController extends Controller
 
         $product->save();
 
-        return redirect()->route('product.index')->with('success', 'Product added successfully!');
+        Alert::success('Success', 'Product added successfully!');
+
+        return redirect()->route('product.index');
     }
 }

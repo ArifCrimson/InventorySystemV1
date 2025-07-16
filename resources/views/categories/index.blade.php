@@ -27,7 +27,7 @@
                                     </div>
 
                                     <div class="table-responsive">
-                                        <table class="table table-hover">
+                                        <table class="table table-hover table-bordered">
                                             <thead>
                                                 <tr>
                                                     <th>No.</th>
