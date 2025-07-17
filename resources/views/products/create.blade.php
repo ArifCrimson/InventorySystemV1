@@ -40,6 +40,22 @@
                                                 <div class="alert alert-danger"> {{ $message }}</div>
                                             @enderror
                                         </div>
+                                        <div class="form-group">
+                                            <label for="exampleTextarea1">Description of the Product</label>
+                                            <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="This chicken is processed one."
+                                                name="productdescription" value="{{ old('productdescription') }}"></textarea>
+                                            @error('productdescription')
+                                                <div class="alert alert-danger"> {{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" id="InputPrice" name="price"
+                                                placeholder="Price in RM e.g: 20" value="{{ old('price') }}">
+                                            @error('price')
+                                                <div class="alert alert-danger">{{ $message }} </div>
+                                            @enderror
+                                        </div>
+
                                         <button type="submit" class="btn btn-primary me-2">Submit</button>
                                     </form>
                                 </div>
