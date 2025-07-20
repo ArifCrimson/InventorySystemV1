@@ -47,9 +47,6 @@ class ProductController extends Controller
             'quantity.min' => 'Quantity must be at least 0.',
             'unit.required' => 'Unit is required.',
             'unit.max' => 'Unit cannot exceed 50 characters.',
-            'cost.required' => 'Cost is required.',
-            'cost.numeric' => 'Cost must be a number.',
-            'cost.min' => 'Cost must be at least 0.',
         ]);
 
         if($validator->fails()){
@@ -63,7 +60,6 @@ class ProductController extends Controller
         $product->category_id = $request->input('category');
         $product->quantity_in_stock = $request->input('quantity');
         $product->unit = $request->input('unit');
-        $product->cost_price = $request->input('cost');
 
         $product->save();
 

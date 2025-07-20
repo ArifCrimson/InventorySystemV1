@@ -41,7 +41,7 @@
                                             @enderror
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleTextarea1">Description of the Product</label>
+                                            <label for="exampleTextarea1">Description of the Product:</label>
                                             <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="This chicken is processed one."
                                                 name="productdescription" value="{{ old('productdescription') }}"></textarea>
                                             @error('productdescription')
@@ -49,13 +49,47 @@
                                             @enderror
                                         </div>
                                         <div class="form-group">
+                                            <label for="inputprice">Price:</label>
                                             <input type="number" class="form-control" id="InputPrice" name="price"
-                                                placeholder="Price in RM e.g: 20" value="{{ old('price') }}">
+                                                placeholder="Enter price" step="0.01" value="{{ old('price') }}">
                                             @error('price')
                                                 <div class="alert alert-danger">{{ $message }} </div>
                                             @enderror
                                         </div>
-
+                                        <div class="form-group">
+                                            <label>Items Category:</label>
+                                            <select class="js-example-basic-single w-100" placeholder="Category"
+                                                name="category">
+                                                <option value="">Please Choose Item's Category</option>
+                                                @foreach ($categories as $c)
+                                                    <option value="{{ $c->id }}"
+                                                        {{ old('category') == $c->id ? 'selected' : '' }}>
+                                                        {{ $c->name }}
+                                                    </option>
+                                                @endforeach
+                                            </select>
+                                            @error('category')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputquantity">Quantity:</label>
+                                            <input type="number" class="form-control" id="InputPrice" name="quantity"
+                                                placeholder="Quantity of the Product" value="{{ old('price') }}"
+                                                min="0" step="1">
+                                            @error('quantity')
+                                                <div class="alert alert-danger">{{ $message }} </div>
+                                            @enderror
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="InputCategoryunit">Unit:</label>
+                                            <input type="text" class="form-control" id="InputCategoryName"
+                                                name="unit" placeholder="Example: kg, pcs"
+                                                value="{{ old('unit') }}">
+                                            @error('unit')
+                                                <div class="alert alert-danger"> {{ $message }}</div>
+                                            @enderror
+                                        </div>
                                         <button type="submit" class="btn btn-primary me-2">Submit</button>
                                     </form>
                                 </div>
