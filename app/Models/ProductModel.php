@@ -13,9 +13,7 @@ class ProductModel extends Model
         'description',
         'price',
         'category_id',
-        'quantity_in_stock',
         'unit',
-        'cost_price',
     ];
 
     public function category()
