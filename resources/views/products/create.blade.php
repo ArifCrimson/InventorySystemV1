@@ -72,7 +72,7 @@
                                                 <div class="alert alert-danger">{{ $message }}</div>
                                             @enderror
                                         </div>
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label for="inputquantity">Quantity:</label>
                                             <input type="number" class="form-control" id="InputPrice" name="quantity"
                                                 placeholder="Quantity of the Product" value="{{ old('price') }}"
@@ -80,7 +80,7 @@
                                             @error('quantity')
                                                 <div class="alert alert-danger">{{ $message }} </div>
                                             @enderror
-                                        </div>
+                                        </div> --}}
                                         <div class="form-group">
                                             <label for="InputCategoryunit">Unit:</label>
                                             <input type="text" class="form-control" id="InputCategoryName"
