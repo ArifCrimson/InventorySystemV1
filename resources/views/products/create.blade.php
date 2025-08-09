@@ -43,7 +43,7 @@
                                         <div class="form-group">
                                             <label for="exampleTextarea1">Description of the Product:</label>
                                             <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="This chicken is processed one."
-                                                name="productdescription" value="{{ old('productdescription') }}"></textarea>
+                                                name="description" value="{{ old('description') }}"></textarea>
                                             @error('productdescription')
                                                 <div class="alert alert-danger"> {{ $message }}</div>
                                             @enderror

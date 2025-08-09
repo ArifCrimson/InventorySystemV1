@@ -30,13 +30,24 @@
                                             <thead>
                                                 <tr>
                                                     <th>No.</th>
-                                                    <th></th>
+                                                    <th>Name</th>
+                                                    <th>Description</th>
+                                                    <th>Price</th>
+                                                    <th>Category</th>
+                                                    <th>Unit</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($products as $index => $p)
                                                     <tr>
-                                                        <td></td>
+                                                        <td> {{ $loop->iteration }} </td>
+                                                        <td> {{ $p->name }} </td>
+                                                        <td> {{ $p->description }} </td>
+                                                        <td> {{ $p->price }} </td>
+                                                        <td> {{ $p->category->name }} </td>
+                                                        <td> {{ $p->unit }} </td>
                                                     </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
