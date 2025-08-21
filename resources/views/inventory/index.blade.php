@@ -20,9 +20,9 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4 class="card-title mb-0">List Of Products</h4>
-                                        <a href="{{ route('product.create') }}"
-                                            class="btn btn-primary btn-rounded btn-fw">Create Products</a>
+                                        <h4 class="card-title mb-0">Inventory Overview</h4>
+                                        <a href=""
+                                            class="btn btn-primary btn-rounded btn-fw">Add Inventory Data</a>
                                     </div>
 
                                     <div class="table-responsive">
@@ -38,16 +38,16 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($products as $p)
+                                                {{-- @foreach ($products as $p) --}}
                                                     <tr>
-                                                        <td> {{ $loop->iteration }} </td>
+                                                        {{-- <td> {{ $loop->iteration }} </td>
                                                         <td> {{ $p->name }} </td>
                                                         <td> {{ $p->description }} </td>
                                                         <td> {{ $p->price }} </td>
                                                         <td> {{ $p->category->name }} </td>
-                                                        <td> {{ $p->unit }} </td>
+                                                        <td> {{ $p->unit }} </td> --}}
                                                     </tr>
-                                                @endforeach
+                                                {{-- @endforeach --}}
                                             </tbody>
                                         </table>
                                     </div>
