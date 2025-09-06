@@ -14,7 +14,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('inventory.index') }}" class="nav-link">
                 {{-- <i class="icon-layout menu-icon"></i> --}}
                 <span class="menu-title">Inventory</span>
             </a>

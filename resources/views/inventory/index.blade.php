@@ -30,11 +30,15 @@
                                             <thead>
                                                 <tr>
                                                     <th>No.</th>
-                                                    <th>Name</th>
-                                                    <th>Description</th>
-                                                    <th>Price</th>
-                                                    <th>Category</th>
-                                                    <th>Unit</th>
+                                                    <th>Product</th>
+                                                    <th>Quantity In Stock</th>
+                                                    <th>Unit Price</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Stock Movement</th>
+                                                    <th>Quantity In(Today)</th>
+                                                    <th>Quantity Out(Today)</th>
+                                                    <th>Action By</th>
+                                                    <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
